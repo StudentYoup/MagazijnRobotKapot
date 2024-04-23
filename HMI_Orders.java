@@ -19,15 +19,14 @@ public class HMI_Orders extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setLayout(null);
-
         Terug.setBounds(30, 30, 200, 50);
         Terug.setBackground(Color.WHITE);
         Terug.addActionListener(this);
         add(Terug);
 
-        setLayout(new GridLayout());
-
         getContentPane().setBackground(Color.GRAY);
+
+
     }
 
     @Override

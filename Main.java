@@ -7,8 +7,6 @@ public class Main {
 
         db = new DBConnection();
 
-        db.getOrders();
-
         HMI_GUI HMI = new HMI_GUI();
     }
 }

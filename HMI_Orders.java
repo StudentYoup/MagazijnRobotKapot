@@ -10,7 +10,7 @@ public class HMI_Orders extends JFrame implements ActionListener {
 
     HMI_GUI HMIGUI;
     JButton Terug = new JButton("Terug");
-    ArrayList<Order> orders;
+
     public HMI_Orders(HMI_GUI HMIGUI){
         this.HMIGUI = HMIGUI;
         setTitle("HMI - Orders");
@@ -26,17 +26,9 @@ public class HMI_Orders extends JFrame implements ActionListener {
 
         getContentPane().setBackground(Color.GRAY);
 
-        orders = Main.db.getOrders();
-        int offset = 0;
-        for(Order order : orders){
-            JButton nieuw = new JButton("#ID: " + order.orderID);
-            nieuw.setBounds(30 + offset, 110, 200, 50);
-            add(nieuw);
-            offset += 230;
-            for(Orderline orderline : order.orderlines){
-
-            }
-        }
+        Orders_Panel ordersPanel = new Orders_Panel();
+        ordersPanel.setBounds(30, 110, 1476, 600);
+        add(ordersPanel);
     }
 
     @Override

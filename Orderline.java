@@ -1,11 +1,11 @@
 package MagazijnRobot;
 
 public class Orderline {
-    private int orderlineID;
+    public int orderlineID;
     private int orderID;
     private int stockItemID;
-    private String description;
-    private int quantity;
+    public String description;
+    public int quantity;
     private int pickedQuantity;
     private boolean complete;
     private Product product;
